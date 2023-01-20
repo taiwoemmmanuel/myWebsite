@@ -56,7 +56,7 @@ body::-webkit-scrollbar-thumb:hover{
 
 /*header*/
 .header{
-    background-image: url('pexels-cátia-matos.jpg');
+    background-image: url('/pics/pexels-cátia-matos.jpg');
     background-clip: border-box;
     background-size: cover;
     backface-visibility: hidden;
@@ -104,7 +104,7 @@ body::-webkit-scrollbar-thumb:hover{
     padding-top:20vh;
 }
 .card{
-    background: url('david\ picture.jpg');
+    background: url("/pics/david\ picture.jpg");
     background-clip: border-box;
     background-size: cover;
     background-repeat: no-repeat;
@@ -342,7 +342,7 @@ body::-webkit-scrollbar-thumb:hover{
     margin-left:7px;
     width:90%;
     height:calc(90%/3);
-    background:url('david\ picture.jpg');
+    background:url('/pics/david\ picture.jpg');
     background-clip: border-box;
     background-size:cover;
     background-position: center;
