@@ -1,0 +1,129 @@
+/*for cursor*/
+@keyframes blink {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.cursor::after {
+  content: "|";
+  font-size: 20px;
+  font-weight: light;
+  margin-left: 3px;
+  animation: blink infinite alternate 0.4s;
+}
+
+
+
+
+.css-selector{
+    background: linear-gradient(313deg, #10b76f, #ff7fff, #6da9db);
+    background-size: 600% 600%;
+
+    -webkit-animation: AnimationName 20s ease infinite;
+    -moz-animation: AnimationName 20s ease infinite;
+    animation: AnimationName 20s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 11%}
+    50%{background-position:100% 90%}
+    100%{background-position:0% 11%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 11%}
+    50%{background-position:100% 90%}
+    100%{background-position:0% 11%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 11%}
+    50%{background-position:100% 90%}
+    100%{background-position:0% 11%}
+}
+.body, .nave {
+    background: linear-gradient(86deg, #133532e5, #a21e88);
+    background-size: 400% 400%;
+
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 53%}
+    50%{background-position:100% 48%}
+    100%{background-position:0% 53%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 53%}
+    50%{background-position:100% 48%}
+    100%{background-position:0% 53%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 53%}
+    50%{background-position:100% 48%}
+    100%{background-position:0% 53%}
+}
+/*zoomIn*/
+.zoomIn {
+    opacity: 1;
+    scale: 1;
+    pointer-events: all;
+  }
+  .zoomIn--hidden {
+    opacity: 0;
+    scale:0.5;
+    pointer-events: none;
+  }
+  .zoomIn--visible {
+    opacity: 1;
+    scale:1;
+    pointer-events: all;
+  }
+  .zoomIn--animate {
+    transition: opacity 1s ease-in-out, scale 0.6s ease-in-out;
+  }
+/*fade in*/
+  .FadeIn {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .fadeIn--hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .fadeIn--visible {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .fadeIn--animate {
+    transition: opacity 1s ease-in-out;
+  }
+
+  .slideIn {
+    opacity: 1;
+   translate:0 0;
+    pointer-events: all;
+  }
+  .slideIn--hidden {
+    opacity: 0;
+    translate:5% 0;
+    pointer-events: none;
+  }
+  .slideIn--visible {
+    opacity: 1;
+    translate:0 0;
+    pointer-events: all;
+  }
+  .slideIn--animate {
+    transition-delay: 0.4s;
+    transition: opacity 1.s ease-in-out, translate 1s ease-in-out;
+  }
+  .svgHandle svg{
+    height:20px;
+    width:20px;
+  }
+  .svgTitle svg{
+    height:40px;
+    width:;
+    font-size: ;
+    display: inline-block;
+  }
