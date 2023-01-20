@@ -65,40 +65,14 @@ var sectionId = ["home","aboutme","resume","projects","hobbies","blog","contact"
 var backgroundText = document.querySelector('.background-text')
 
 
-function elementInViewport() {
 
-   
-	for(let i = 0; i < sectionId.length; i++){
-		var section = document.getElementById(`${sectionId[i]}`)
-		var bounding = section.getBoundingClientRect();
-		var quarterHeight = bounding.height/4
-		var deviceHeight = window.innerHeight - quarterHeight
-		var p = document.getElementById('resume')
-		var x = p.getBoundingClientRect();
-		//console.log(x.top)
-
-		if(bounding.top <= deviceHeight){
-
-			if(sectionId[i] === 'aboutme'){
-				backgroundText.textContent = 'about'
-			}else{
-				backgroundText.textContent = sectionId[i]
-			}
-				
-		}
-}
-}
 document.addEventListener('scroll', zoomIn);
 window.addEventListener('resize', zoomIn);
 
 document.addEventListener('scroll', slideIn);
 window.addEventListener('resize', slideIn);
 
-document.addEventListener('scroll', elementInViewport);
-window.addEventListener('resize', elementInViewport);
-
 document.addEventListener('DOMContentLoaded', function() {
     zoomIn();
 	slideIn();
-	elementInViewport()
 })

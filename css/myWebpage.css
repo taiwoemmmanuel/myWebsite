@@ -17,20 +17,6 @@ body{
     font-family: 'Josefin Sans', sans-serif;
     overflow-x: hidden;
 }
-.background-text{
-    color:rgb(52, 8, 245);
-    background-color:;
-    width:100%;
-    font-size:50px;
-    text-align: center;
-    position: fixed;
-    font-family: arial black;
-    z-index:-1;
-    top:50%;
-    scale:1.5;
-    transition:1s ease;
-    text-transform: uppercase;    
-}
 body::-webkit-scrollbar{
     -webkit-appearance:none ;
     width:10px;
@@ -56,12 +42,14 @@ body::-webkit-scrollbar-thumb:hover{
 
 /*header*/
 .header{
-    background-image: url('/pics/pexels-cátia-matos.jpg');
-    background-clip: border-box;
-    background-size: cover;
-    backface-visibility: hidden;
     height:;
     opacity:0.8;
+    height:100vh;
+}
+.header-bg{
+    width:100%;
+    height: 100vh;
+    z-index: 0;
 }
 .overflow-btn{
     color:white;
@@ -101,7 +89,14 @@ body::-webkit-scrollbar-thumb:hover{
     background: rgb(10, 10, 10, 0.4);
     display: ;
     height:100vh;
+    padding:0;
     padding-top:20vh;
+    position: absolute;
+    top:0;
+    background:;
+    width:100%;
+    margin:0;
+    
 }
 .card{
     background-clip: border-box;    
@@ -523,6 +518,11 @@ body::-webkit-scrollbar-thumb:hover{
     
 }
 @media  (min-width:991px){
+    .cover{
+        width: ;
+        margin-right: ;
+        padding-right:200px;
+    }
 /*overflpow buttom*/
     .overflow-btn:first-of-type{
         display: none;
