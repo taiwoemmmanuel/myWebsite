@@ -16,10 +16,9 @@ var portfolios = [
    " Graphic designer",
    " Javascript devolper",
    " Writer & Blogger",
-  " Politics and Music Lover"]
+  " Politics and Music Lover",
+  " I'm a Follower of Yeshua"]
 
-  var port = ['cart','bart','card','blog','vlog']
-console.log(portfolios.length)
 
    //function loopOverText(texts,seconds){
    //     let x = texts.length
@@ -32,7 +31,6 @@ console.log(portfolios.length)
    // }
    // loopOverText(port,2000)  
     let string = portfolios[0]
-    console.log(JSON.stringify(string))
   let num = 0
     setInterval(() => {
       num++
@@ -66,17 +64,20 @@ console.log(portfolios.length)
   
   //09156512878 
   var scrollDegree = 0;
-  var clickTracker = 1;
+  var clickTracker = 0;
   var counterLength = projectItem.length - 1
  projectItem[0].classList.add('project-item-inViewPort')
-
+ 
   function showNext (){
-    scrollDegree += 360
+    var bond = projectItem[clickTracker].getBoundingClientRect();
     clickTracker++;
-    if(clickTracker <= projectItem.length){
+    var space = window.innerWidth - bond.right
+    scrollDegree += bond.right - space
+    console.log(scrollDegree, scrollDegree*2)
+   if(clickTracker <= projectItem.length){
       projectWindow.scrollTo(scrollDegree,0) 
-    }
-   if(clickTracker === projectItem.length){
+   }
+   if(clickTracker === projectItem.length - 1){
     nextButton.style.display = 'none'
    }
    prevButton.style.display = 'inline'
@@ -89,19 +90,23 @@ projectWindow.addEventListener('scroll',()=>{
     }else{
       projectItem[i].classList.remove('project-item-inViewPort')
     }
+    var bond = projectItem[clickTracker].getBoundingClientRect();
   }
 })
 
 function showPrev(){
-    scrollDegree -= 360
-    clickTracker--;
-    if(clickTracker >= 1){
+  var bond = projectItem[clickTracker].getBoundingClientRect();
+  clickTracker--;
+  var space = document.documentElement.clientWidth - bond.left
+  scrollDegree += bond.left - space
+  console.log(scrollDegree)
+  // if(clickTracker >= 1){
       projectWindow.scrollTo(scrollDegree,0) 
-    }
-   if(clickTracker === 1){
+   // }
+   if(clickTracker === 0){
     prevButton.style.display = 'none'
    }
-   nextButton.style.display = 'inline'
+  nextButton.style.display = 'inline'
   
 }
 

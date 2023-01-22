@@ -67,11 +67,11 @@ tw({
   target : document.querySelector('.typewritedText'),
   text : [
     "Frontend dev",
-    "UI designer",
-    "Graphic designer",
+    "UI & Graphic designer",
     "Javascript devolper",
     "Writer & Blogger",
-   "Politics and Music Lover"
+   "Politics and Music Lover",
+   "follower of Yeshua"
   ],
    forward : 50,
    pause : 500,

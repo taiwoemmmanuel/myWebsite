@@ -38,7 +38,7 @@
     50%{background-position:100% 90%}
     100%{background-position:0% 11%}
 }
-.bodys, .naves {
+.body, .nave {
     background: linear-gradient(86deg, #133532e5, #a21e88);
     background-size: 400% 400%;
 
