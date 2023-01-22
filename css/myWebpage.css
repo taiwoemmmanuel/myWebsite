@@ -223,8 +223,8 @@ body::-webkit-scrollbar-thumb:hover{
     width:0px;
     overflow: hidden;
     position:fixed;
-    background:rgb(19, 53, 50);
-    background-image:linear-gradient(45deg,rgb(93, 9, 82) 50% 10%,rgb(123, 8, 146) 0% 10%);
+    background:rgb(127, 0, 127);
+    background-images:linear-gradient(45deg,rgb(127, 0, 127) 50% 10%,rgb(255, 127, 255) 0% 10%);
     display:;
     background-size:;
     top:0;
@@ -250,6 +250,7 @@ body::-webkit-scrollbar-thumb:hover{
     color:rgb(255, 127, 255);
     background-color:transparent !important;
     transition:0.7s  ease-in;
+    font-size:18px;
 }
 .nav-item a:active,
 .nav-item a:hover,
@@ -263,7 +264,7 @@ body::-webkit-scrollbar-thumb:hover{
     text-align: center;
     padding: 0;
     width: 100%;
-    background: purple;
+    background: rgb(127, 0, 127);
 }
 .body section{
     height:auto;
@@ -298,6 +299,9 @@ body::-webkit-scrollbar-thumb:hover{
     box-shadow:rgba(242, 241, 242, 0.429) 0px 3px 2px;
     flood-opacity: 2;
     margin:50px 0;
+}
+#aboutme .big-container .content:first-of-type{
+    padding:10px;
 }
 #aboutme .big-container .content:last-of-type{
     height: fit-content;
@@ -371,105 +375,89 @@ body::-webkit-scrollbar-thumb:hover{
 }
 
 /*projects*/
-#projects .content {
-    overflow:hidden ;
-    padding:0;
-    width:100%;
+#projects .content a{
+   text-decoration: none;
+   color:white;
+   display: block;
+   padding:10px 5px;
 }
-.project-roller{
-    padding:10px 0 ;
-    margin-top: 10px;
+#projects .content{
+    width:90%;
+    height:200px;
 }
-.project-window{
-    height:260px;
-    overflow-x: visible;
-    overflow-y: hidden;
-    white-space: nowrap;
-    vertical-align: middle;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    margin-bottom:5px;
-    padding:20px 0;
-    display: flex;
-    transition:scroll 0.7s ease-in-out;
-    scroll-behavior: smooth;
-    
-   }
-.project-roller button i{
-    fill:rgb(255, 255, 255);
-    color:rgb(255, 255, 255);
-}
-.project-roller button:first-of-type{
-    position:absolute ;
-    left:20px;
-    top:40%;
-    z-index: 1;
-    cursor: pointer;
-    font-size:30px;
-    opacity:0.5;
-    transition:opacity 0.5s ease-in-out;
-    border:none;
-    border-radius:50%;
-    background: rgba(46, 45, 45, 0.448);
-    height:50px;
-    width:50px;
-    display: none;
-    transition: display 0.3s ease-out;
-    padding:5px;
-}
-.project-roller button:last-of-type{
-    position: absolute;
-    right: 20px;
-    top:40%;
-    z-index: 1;
-    cursor: pointer;
-    font-size:30px;
-    opacity:0.5;
-    transition:opacity 0.5s ease-in-out;
-    border:none;
-    border-radius:50%;
-    background: rgba(46, 45, 45, 0.448);
-    height:50px;
-    width:50px;
-    padding: 5px;
-}
-
-.project-roller button:hover,:active{
-    opacity:1;
-}
-.project-window::-webkit-scrollbar{
-    width:0;
-    height:0;
-    top:0%;
-    z-index: 1;
-}
-.project-item{
-    width:;
-    margin-right:3%;
-    margin-left: 3%;
+#projects .content img{
+    width:100px;
+    margin: auto;
     margin-top:10px;
-    display: inline-block;
-    background:purple;
-    white-space: nowrap;
-    vertical-align: top;
-    border-radius:5px;
-    flex: 1 0 80%;
-    box-shadow: rgba(0, 0, 0, 1) 0px 0px 15px -6px;
-    transition:scale 0.4s ease-in-out;
-    z-index: 0;
+    display: block;
 }
-.project-item:first-of-type{
-   margin-left: 10%;
+#projects .content p{
+    display: block;
+    font-weight: bold;
+    font-size:20px;
 }
-.project-item:last-of-type{
-    margin-right: 10%;
+/*hobbies*/
+#hobbies{
+
 }
-.project-item-right{
-    margin-right:20px;
+#hobbies .hobbies-holder .content{
+    padding-bottom:10px;
 }
-.project-item-inViewPort{
-    scale:1.1;
-    z-index: 1;
+#hobbies .hobbies-holder .content h2{
+    font-weight: bolder;
+    text-align: start;
+    font-size: 30px;
+    margin:10px;
+    border-bottom: 1px solid white;
+    padding:10px 0;
+}
+#hobbies .hobbies-holder .content .hobbies-flex{
+    margin-top:20px;
+}
+#hobbies .hobbies-holder .content .svgHandle{
+    margin-top:-5px;
+    position:absolute;
+    left:40px;
+    z-index:-1;
+}
+#hobbies .hobbies-holder .content p{
+    font-size: 20px;
+}
+#hobbies .hobbies-holder .content a{
+    color:white;
+    font-weight: bold;
+    text-decoration: underline;
+    text-orientation: sideways;
+    text-align: left;
+    margin-left:70px;
+    display:block ;
+
+}
+/*contact*/
+#contact{
+
+}
+#contact .contact-holder{
+
+}
+#contact .contact-holder .content{
+    height:200px;
+}
+#contact .contact-holder .content a{
+    display: block;
+    padding:30px;
+    height:200px;
+    margin:0;
+    color:white;
+    text-decoration: none;
+}
+#contact .contact-holder .content i{
+    font-size: 50px;
+    fill:white;
+    color:white;
+}
+#contact .contact-holder .content p{
+    font-size:30px;
 }
 /*for mobile screen*/
 @media  (min-width:480px) and (max-width:990px){
@@ -518,9 +506,12 @@ body::-webkit-scrollbar-thumb:hover{
         display: flex;
         flex-wrap: wrap;
     }
+    #aboutme .big-container .content:first-of-type{
+        height:100px;
+    }
     #aboutme .big-container .content:last-of-type{
         margin-right:30px;
-        margin-top:0px;
+        margin-top:-250px;
         display: block;
     }
     /*resume*/
@@ -557,11 +548,29 @@ body::-webkit-scrollbar-thumb:hover{
         margin-top:-10px;
     }
     /*project*/
-    #projects .content{
-        width:700px;
-        height:400px;
+    #projects-window{
+        display: flex;
     }
-    .project-window{
-        height:300px;
+    #projects .content{
+        width:40%;
+        height:200px;
+        margin:10px;
+    }
+    /*hobbies*/
+    .hobbies-holder{
+        display: flex;
+    }
+    .hobbies-holder .content{
+        height: auto;
+        margin:10px 20px;
+    }
+    /*contact*/
+    #contact-holder{
+        display: flex;
+    }
+    #contact .content{
+        width:40%;
+        height:200px;
+        margin:10px;
     }
 }
